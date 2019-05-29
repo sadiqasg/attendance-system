@@ -4,15 +4,36 @@
       "id": 1,
       "first_name": "John",
       "last_name": "Doe",
-      "phone": 1234567890,
       "email": "johndoe@mail.com",
       "gender": "male"
+    },
+    {
+      "id": 2
+    },
+    {
+      "first_name": "jane",
+      "last_name": "doe",
+      "email": "janed@mail.com",
+      "gender": "female",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
     }
   ],
   "meetings": [
     {
       "id": 1,
-      "attendance": [{ "employeeId": 1, "status": false }]
+      "title": "meeting of meetings",
+      "attendance": [
+        {
+          "employeeId": 1,
+          "status": false
+        }
+      ]
     }
   ]
 }
