@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home</title>
     <!-- styles -->
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      .row.main {
+        height: 100vh;
+      }
+    </style>
     <link
       href="https://fonts.googleapis.com/css?family=Josefin+Sans"
       rel="stylesheet"
@@ -34,13 +42,10 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Admin Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="../index.html">Home Page</a>
             </li>
           </ul>
         </div>
@@ -48,93 +53,108 @@
     </header>
 
     <main>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body text-center">
-                <h5 class="card-title">Employees</h5>
-                <p class="card-text" id="NumberOfemployees"></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body text-center">
-                <h5 class="card-title">Meetings</h5>
-                <p class="card-text" id="NumberOfMeetings"></p>
-              </div>
-            </div>
-          </div>
+      <div class="row main">
+        <div class="col-md-2" id="side-nav-div">
+          <ul class="side-nav-list text-center">
+            <li class="active"><a>Dashboard</a></li>
+            <li><a class="btn btn-light mt-3">+ Current Meeting</a></li>
+          </ul>
         </div>
 
-        <!-- accordion -->
-        <div id="accordion" class="mt-5">
-          <div class="card">
-            <div class="card-header">
-              <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                Employees
-              </a>
-              <button
-                class="btn btn-dark float-right"
-                data-toggle="modal"
-                data-target="#addEmployeesModal"
-              >
-                + add
-              </button>
-            </div>
-            <div
-              id="collapseOne"
-              class="collapse show"
-              data-parent="#accordion"
-            >
-              <div class="card-body" id="employeesCardBody">
-                <!-- employees here -->
-                <table
-                  class="table table-responsive table-bordered table-hover d-md-table"
-                >
-                  <thead class="bg-light">
-                    <tr>
-                      <th>id</th>
-                      <th>Firstname</th>
-                      <th>Lastname</th>
-                      <th>Email</th>
-                      <th>Gender</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>john@example.com</td>
-                      <td>Male</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Mary</td>
-                      <td>Moe</td>
-                      <td>mary@example.com</td>
-                      <td>Female</td>
-                    </tr>
-                  </tbody>
-                </table>
+        <div class="col-md-10">
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Employees</h5>
+                    <p class="card-text" id="numberOfemployees"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Meetings</h5>
+                    <p class="card-text" id="totalMeetings"></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <a
-                class="collapsed card-link"
-                data-toggle="collapse"
-                href="#collapseTwo"
-              >
-                History
-              </a>
-            </div>
-            <div id="collapseTwo" class="collapse" data-parent="#accordion">
-              <div class="card-body">
-                <!-- meetings history here -->
+
+            <!-- accordion -->
+            <div id="accordion" class="mt-5">
+              <div class="card">
+                <div class="card-header">
+                  <a
+                    class="card-link"
+                    data-toggle="collapse"
+                    href="#collapseOne"
+                  >
+                    All Employees
+                  </a>
+                  <button
+                    class="btn btn-dark float-right"
+                    data-toggle="modal"
+                    data-target="#addEmployeesModal"
+                  >
+                    + add
+                  </button>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="collapse show"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <!-- employees here -->
+                    <table
+                      class="table table-responsive table-bordered table-hover d-md-table"
+                    >
+                      <thead class="bg-light">
+                        <tr>
+                          <th>id</th>
+                          <th>Firstname</th>
+                          <th>Lastname</th>
+                          <th>Email</th>
+                          <th>Gender</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="employeesTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <a
+                    class="collapsed card-link"
+                    data-toggle="collapse"
+                    href="#collapseTwo"
+                  >
+                    Meeting History
+                  </a>
+                </div>
+                <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                  <div class="card-body">
+                    <!-- meetings history here -->
+                    <table
+                      class="table table-responsive table-bordered table-hover d-md-table"
+                    >
+                      <thead class="bg-light">
+                        <tr>
+                          <th>id</th>
+                          <th>Date</th>
+                          <th>Title</th>
+                          <th>Attendance</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="meetingsTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -155,26 +175,49 @@
 
             <!-- Modal body -->
             <div class="modal-body" id="addEmployeesModalBody">
-              <input
-                type="text"
-                id="first_name"
-                placeholder="Enter first name"
-              />
-              <input
-                type="text"
-                id="last_name"
-                placeholder="Enter last name"
-              />
-              <input type="email" id="email" placeholder="Enter email" />
-              <input type="text" id="gender" placeholder="Gender" />
+              <form id="employeeForm" method="POST" action="">
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  placeholder="Enter first name"
+                />
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  placeholder="Enter last name"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email"
+                />
+                <input
+                  type="text"
+                  name="gender"
+                  id="gender"
+                  placeholder="Gender"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-success btn-block"
+                  id="saveEmployee"
+                >
+                  Add
+                </button>
+              </form>
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-success" id="saveEmployee">
-                Add
-              </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <button
+                type="button"
+                class="btn btn-danger"
+                id="closeModal"
+                data-dismiss="modal"
+              >
                 Close
               </button>
             </div>

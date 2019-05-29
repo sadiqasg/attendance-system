@@ -7,7 +7,7 @@ header.jumbotron {
   /* filter: blur(1px); */
 }
 header .header-text {
-    text-shadow: #fff 0 0 10px;
+  text-shadow: #fff 0 0 10px;
 }
 main #meeting-img {
   display: block;
@@ -34,4 +34,18 @@ main #attend-img {
   margin: 5px 0;
   padding-left: 5px;
   width: 100%;
+}
+#side-nav-div {
+  background-color: teal;
+}
+.side-nav-list {
+  list-style-type: none;
+  margin: auto;
+  margin-top: 25%;
+}
+.side-nav-list .active {
+  font-weight: bold;
+  font-size: larger;
+  color: rgb(172, 188, 207);
+  background: #36383b;
 }
