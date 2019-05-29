@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <!-- styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/bootstrap.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Employees</h5>
+                <p class="card-text" id="NumberOfemployees"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meetings</h5>
+                <p class="card-text" id="NumberOfMeetings"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- accordion -->
+        <div id="accordion" class="mt-5">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Employees
+              </a>
+              <button
+                class="btn btn-dark float-right"
+                data-toggle="modal"
+                data-target="#addEmployeesModal"
+              >
+                + add
+              </button>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse show"
+              data-parent="#accordion"
+            >
+              <div class="card-body" id="employeesCardBody">
+                <!-- employees here -->
+                <table
+                  class="table table-responsive table-bordered table-hover d-md-table"
+                >
+                  <thead class="bg-light">
+                    <tr>
+                      <th>id</th>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Email</th>
+                      <th>Gender</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>john@example.com</td>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Mary</td>
+                      <td>Moe</td>
+                      <td>mary@example.com</td>
+                      <td>Female</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a
+                class="collapsed card-link"
+                data-toggle="collapse"
+                href="#collapseTwo"
+              >
+                History
+              </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                <!-- meetings history here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Employees Modal -->
+      <div class="modal" id="addEmployeesModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Add Employee</h4>
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" id="addEmployeesModalBody">
+              <input
+                type="text"
+                id="first_name"
+                placeholder="Enter first name"
+              />
+              <input
+                type="text"
+                id="last_name"
+                placeholder="Enter last name"
+              />
+              <input type="email" id="email" placeholder="Enter email" />
+              <input type="text" id="gender" placeholder="Gender" />
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-success" id="saveEmployee">
+                Add
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="../src/jquery.js"></script>
+    <script src="../src/bootstrap.min.js"></script>
+    <script src="../src/main.js"></script>
+  </body>
+</html>
