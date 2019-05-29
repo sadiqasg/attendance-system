@@ -6,7 +6,13 @@
   "scripts": {
     "test": ""
   },
-  "keywords": ["server", "json"],
+  "keywords": [
+    "server",
+    "json"
+  ],
   "author": "sadiq",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.0"
+  }
 }
