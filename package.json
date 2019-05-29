@@ -1,0 +1,12 @@
+{
+  "name": "bootcamp_project",
+  "version": "1.0.0",
+  "description": "a simple attendance system",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": ["server", "json"],
+  "author": "sadiq",
+  "license": "ISC"
+}
