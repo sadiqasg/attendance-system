@@ -2,26 +2,45 @@
   "employees": [
     {
       "id": 1,
-      "first_name": "John",
-      "last_name": "Doe",
+      "firstName": "John",
+      "lastName": "Doe",
       "email": "johndoe@mail.com",
       "gender": "male"
     },
     {
-      "id": 2
+      "id": 2,
+      "firstName": "abc",
+      "lastName": "def",
+      "email": "a@b.com",
+      "gender": "male"
     },
     {
-      "first_name": "jane",
-      "last_name": "doe",
-      "email": "janed@mail.com",
-      "gender": "female",
+      "firstName": "abu",
+      "lastName": "sadiq",
+      "email": "abs@mail.com",
+      "gender": "male",
       "id": 3
     },
     {
+      "firstName": "jane",
+      "lastName": "dawsom",
+      "email": "jdaw@mail.com",
+      "gender": "female",
       "id": 4
     },
     {
+      "firstName": "dr",
+      "lastName": "strange",
+      "email": "drs@email.com",
+      "gender": "male",
       "id": 5
+    },
+    {
+      "firstName": "cap",
+      "lastName": "marvel",
+      "email": "cm@avengers.com",
+      "gender": "female",
+      "id": 6
     }
   ],
   "meetings": [
