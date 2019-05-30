@@ -70,6 +70,14 @@
       "email": "ne@sd.vomq",
       "gender": "male",
       "id": 9
+    },
+    {
+      "firstName": "barry",
+      "lastName": "allen",
+      "email": "barry@starlabs.com",
+      "gender": "male",
+      "attendance": [],
+      "id": 10
     }
   ],
   "meetings": [
@@ -122,6 +130,29 @@
         "doe"
       ],
       "id": 5
+    },
+    {
+      "title": "yeah bish",
+      "attendees": [
+        "John Doe",
+        "cap marvel"
+      ],
+      "id": 6
+    },
+    {
+      "title": "avengersssssss [pauses, breathes] assemble",
+      "attendees": [
+        "dr strange",
+        "cap marvel"
+      ],
+      "id": 7
+    },
+    {
+      "title": "more meetings",
+      "attendees": [
+        "abc def"
+      ],
+      "id": 8
     }
   ]
 }

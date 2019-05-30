@@ -74,7 +74,7 @@
           <div class="container mt-5">
             <div class="row">
               <div class="col-sm-6">
-                <div class="card bg-light">
+                <div class="card bg-info text-light">
                   <div class="card-body text-center">
                     <h5 class="card-title">Employees</h5>
                     <p class="card-text" id="numberOfemployees"></p>
@@ -82,10 +82,35 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="card bg-light">
+                <div class="card bg-info text-light">
                   <div class="card-body text-center">
                     <h5 class="card-title">Meetings</h5>
                     <p class="card-text" id="totalMeetings"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trigger/Open CSS Modal -->
+            <button class="myBtn" style='display: none'>Open Modal</button>
+
+            <!-- The Modal By Id -->
+            <div id="myModal" class="hardcode-modal">
+              <!-- Modal content -->
+              <div class="hardcode-modal-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                  <h5>Details</h5>
+                  <hr/>
+                  <div class="row modal-by-id">
+                    <div class="col-md-5">
+                        <p>Employee Number: <span id="employeeNumber"></span></p>
+                        <p>Gender: <span id="employeeGender"></span></p>
+                    </div>
+                    <div class="col-md-7">
+                      <p>Name: <span id="employeeName"></span></p>
+                      <p>Email: <span id="employeeMail"></span></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -164,7 +189,7 @@
         </div>
       </div>
 
-      <!-- employees Modal -->
+      <!-- employees modal -->
       <div class="modal" id="addEmployeesModal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -247,16 +272,20 @@
                 <input
                   class="form-control"
                   type="text"
-                  id="title"
+                  id="meetingTitle"
                   placeholder="Enter title"
                 />
                 <hr />
                 <h5>Mark Attendance</h5>
-                <hr/>
-                <div id="employeesAttendance">
-                </div>
-                <hr/>
-                <button class="btn btn-block btn-success" id="saveEmployeeAttendance">Save</button>
+                <hr />
+                <div id="employeesAttendance"></div>
+                <hr />
+                <button
+                  class="btn btn-block btn-success"
+                  id="saveEmployeeAttendance"
+                >
+                  Save
+                </button>
               </form>
             </div>
 
@@ -265,7 +294,7 @@
               <button
                 type="button"
                 class="btn btn-danger"
-                id="closeModal"
+                id="closeMeetingModal"
                 data-dismiss="modal"
               >
                 Close
