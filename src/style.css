@@ -41,7 +41,8 @@ main #attend-img {
 .side-nav-list {
   list-style-type: none;
   margin: auto;
-  margin-top: 25%;
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 .side-nav-list .active {
   font-weight: bold;

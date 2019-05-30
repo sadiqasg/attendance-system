@@ -1,6 +1,5 @@
 $(function() {
   const url = "http://localhost:3000";
-  $('#totalMeetings').html(20);
   
   // fetch employees from json db
   let getEmployees = () => {
@@ -27,6 +26,39 @@ $(function() {
         }
 
         $("#employeesTableBody").html(records);
+      },
+      error: err => console.log("error", err)
+    });
+  };
+
+  // get meetings history from db
+  let getHistory = () => {
+    $.ajax({
+      type: "GET",
+      url: `${url}/meetings`,
+      dataType: "json",
+      success: result => {
+        let history = "";
+        let total = parseInt(result.length);
+
+        $('#totalMeetings').html(total);
+
+        for (let i in result) {
+          console.log(result[i].attendance[0].name);
+        }
+        // for (var i in result) {
+        //   records += `<tr>
+        //               <td>${result[i].id}</td>
+        //               <td>${result[i].firstName}</td>
+        //               <td>${result[i].lastName}</td>
+        //               <td>${result[i].email}</td>
+        //               <td>${result[i].gender}</td>
+        //           `;
+
+        //   records += `</tr>`;
+        // }
+
+        // $("#employeesTableBody").html(records);
       },
       error: err => console.log("error", err)
     });
@@ -59,5 +91,6 @@ $(function() {
     });
   });
 
-  // getEmployees();
+  getEmployees();
+  getHistory();
 }); //end

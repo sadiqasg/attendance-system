@@ -41,6 +41,28 @@
       "email": "cm@avengers.com",
       "gender": "female",
       "id": 6
+    },
+    {
+      "firstName": "aaa",
+      "lastName": "bbb",
+      "email": "ccc",
+      "gender": "ddd",
+      "att": [
+        {
+          "name": "musa"
+        },
+        {
+          "name": "amina"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "firstName": "sadiq",
+      "lastName": "sambo",
+      "email": "sadiqasg@gmail.com",
+      "gender": "male",
+      "id": 8
     }
   ],
   "meetings": [
@@ -49,8 +71,10 @@
       "title": "meeting of meetings",
       "attendance": [
         {
-          "employeeId": 1,
-          "status": false
+          "name": "john"
+        },
+        {
+          "name": "wick"
         }
       ]
     }
