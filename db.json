@@ -63,6 +63,21 @@
       "email": "sadiqasg@gmail.com",
       "gender": "male",
       "id": 8
+    },
+    {
+      "firstName": "new",
+      "lastName": "employee",
+      "email": "ne@sd.vomq",
+      "gender": "male",
+      "id": 9
+    },
+    {
+      "firstName": "barry",
+      "lastName": "allen",
+      "email": "barry@starlabs.com",
+      "gender": "male",
+      "attendance": [],
+      "id": 10
     }
   ],
   "meetings": [
@@ -77,6 +92,67 @@
           "name": "wick"
         }
       ]
+    },
+    {
+      "id": 2,
+      "title": "second meeting",
+      "attendance": [
+        {
+          "name": "night"
+        },
+        {
+          "name": "king"
+        }
+      ]
+    },
+    [
+      "sadiq",
+      "femi",
+      "john",
+      "doe"
+    ],
+    {
+      "title": "salary increase",
+      "attendees": [
+        "sadiq",
+        "femi",
+        "john",
+        "doe"
+      ],
+      "id": 4
+    },
+    {
+      "title": "salary increase",
+      "attendees": [
+        "sadiq",
+        "femi",
+        "john",
+        "doe"
+      ],
+      "id": 5
+    },
+    {
+      "title": "yeah bish",
+      "attendees": [
+        "John Doe",
+        "cap marvel"
+      ],
+      "id": 6
+    },
+    {
+      "title": "avengersssssss [pauses, breathes] assemble",
+      "attendees": [
+        "dr strange",
+        "cap marvel"
+      ],
+      "id": 7
+    },
+    {
+      "title": "more meetings",
+      "attendees": [
+        "abc def"
+      ],
+      "id": 8
     }
   ]
 }
