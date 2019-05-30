@@ -50,3 +50,6 @@ main #attend-img {
   color: rgb(172, 188, 207);
   background: #36383b;
 }
+.attnd-selected {
+  background-color: lightgreen;
+}
