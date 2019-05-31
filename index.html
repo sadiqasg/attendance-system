@@ -18,6 +18,66 @@
     <script src="./src/bootstrap.min.js"></script>
   </head>
   <body>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title col-12 text-center">Login as Admin</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form>
+              <p
+                class="text-center bg-danger text-light"
+                id="error"
+                style="display:none"
+              >
+                Wrong admin credentials
+              </p>
+              <p
+                class="text-center bg-warning text-light"
+                id="missing"
+                style="display:none"
+              >
+                Fill the missing fields
+              </p>
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Username"
+                id="username"
+              />
+              <input
+                type="password"
+                class="form-control mb-3"
+                placeholder="Password"
+                id="pwd"
+              />
+              <button
+                type="button"
+                class="btn btn-info btn-block"
+                onclick="login()"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="jumbotron text-center">
       <div class="header-text">
         <h2>DecaMeet</h2>
@@ -41,10 +101,13 @@
               id="attend-img"
             />
             <div class="text-center mt-3">
-              <p>
+              <h5>
                 Simplify the tedious task of keeping attendance.
-              </p>
-              <a class="btn btn-primary mb-5" href="./views/dashboard.html"
+              </h5>
+              <a
+                class="btn btn-info mb-5 text-light"
+                data-toggle="modal"
+                data-target="#myModal"
                 >Get Started</a
               >
             </div>
@@ -56,5 +119,26 @@
     <footer class="footer">
       <p>&copy; 2019. Sadiq Sambo | Decagon</p>
     </footer>
+
+    <script>
+      function login() {
+        let uname = document.querySelector("#username").value;
+        let pwd = document.querySelector("#pwd").value;
+
+        if (!uname || !pwd) {
+          document.querySelector('#missing').style.display = "block";
+          setTimeout(function() {
+            document.querySelector('#missing').style.display = "none";
+          }, 2000)
+        } else if (uname === "sadiq" && pwd === "superadmin") {
+          window.location = "./views/dashboard.html";
+        } else {
+          document.querySelector('#error').style.display = "block";
+          setTimeout(function() {
+            document.querySelector('#error').style.display = "none";
+          }, 2000)
+        }
+      }
+    </script>
   </body>
 </html>

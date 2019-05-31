@@ -1,6 +1,20 @@
 $(function() {
   const url = "http://localhost:3000";
 
+  // login
+  // $(document).on('click', '#adminLogin', () => {
+  //     let uname = username = $('#username').val();
+  //     let pwd = $('#pwd').val();
+  //   if (!uname || !pwd) {
+  //     alert('fill the missing fields')
+  //   }
+  //   if (user.username === "sadiq" || user.pwd === "superadmin") {
+  //     window.location = './views/dashboard.html';
+  //   } else {
+  //     $('#error').css('display', 'block');
+  //   }
+  // })
+
   // fetch employees from json db
   let getEmployees = () => {
     $.ajax({
@@ -126,6 +140,7 @@ $(function() {
       error: (err) => {console.log('error', err)}
     });
   });
+
 
   // create/save employee
   $("#saveEmployee").on("click", e => {

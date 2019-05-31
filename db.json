@@ -1,17 +1,26 @@
 {
+  "users": [
+    {
+      "username": "sadiq",
+      "password": "superadmin",
+      "role": "super_admin"
+    }
+  ],
   "employees": [
     {
       "id": 1,
       "firstName": "John",
       "lastName": "Doe",
-      "email": "johndoe@mail.com",
-      "gender": "male"
+      "email": "jd@mail.com",
+      "gender": "male",
+      "status": "never attended"
     },
     {
       "firstName": "Jane",
       "lastName": "Dawsom",
       "email": "jdaw@mail.com",
       "gender": "female",
+      "status": "never attended",
       "id": 2
     },
     {
@@ -19,6 +28,7 @@
       "lastName": "the Incredible",
       "email": "hulk@avengers.com",
       "gender": "male",
+      "status": "never attended",
       "id": 3
     },
     {
@@ -26,6 +36,7 @@
       "lastName": "son of Odin",
       "email": "thor@asgard.com",
       "gender": "male",
+      "status": "never attended",
       "id": 4
     },
     {
