@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "username": "sadiq",
+      "password": "superadmin",
+      "role": "super_admin"
+    }
+  ],
   "employees": [
     {
       "id": 1,

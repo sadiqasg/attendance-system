@@ -2,12 +2,12 @@ body * {
   font-family: "Josefin Sans";
 }
 header.jumbotron {
-  background-image: url("../img/chairs.jpg");
-  background-size: cover;
+  background-color: #132238;
+  color: #fff;
+  /* background: linear-gradient(#132238, #c0c0c0, #132238); */
+  /* background-image: url("../img/chairs.jpg"); */
+  /* background-size: cover; */
   /* filter: blur(1px); */
-}
-header .header-text {
-  text-shadow: #fff 0 0 10px;
 }
 main #meeting-img {
   display: block;
