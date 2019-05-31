@@ -51,10 +51,10 @@ $(function() {
         $("#totalMeetings").html(total);
 
         for (var i in result) {
-          history += `<tr>
+          history += `<tr id="${result[i].id}">
                       <td>${result[i].id}</td>
                       <td>${result[i].title}</td>
-                      <td><button class='btn btn-info viewId'>view</button></td></tr>
+                      <td><button class='btn btn-info viewAttendance'>view</button></td></tr>
                  `;
         }
 
@@ -64,6 +64,7 @@ $(function() {
     });
   };
 
+  // get employee by id record on employees table
   $(document).on("click", ".table-rows", function() {
     let id = $(this)
       .parent()
@@ -80,6 +81,32 @@ $(function() {
         $(".myBtn").click();
       },
       error: e => console.log(e)
+    });
+  });
+
+  // view attendance list
+  $(document).on("click", ".viewAttendance", function() {
+    var id = $(this)
+      .closest("tr")
+      .attr("id");
+
+    $.ajax({
+      type: "get",
+      url: `${url}/meetings/${id}`,
+      dataType: "json",
+      success: data => {
+        let attendees = data.attendance;
+        let list = ''
+        for (let i = 0; i < attendees.length; i++) {
+          list += `<p class="attnd-p">${attendees[i]}</p>`
+        }
+        $("#meeting-title").text(`"${data.title}"`);
+        $('#attendees-list').html(list)
+        $(".myBtn2").click();
+      },
+      error: err => {
+        console.log(err);
+      }
     });
   });
 
@@ -120,7 +147,7 @@ $(function() {
 
     let meeting = {
       title: title,
-      attendees: attendees
+      attendance: attendees
     };
 
     $.ajax({
@@ -133,6 +160,7 @@ $(function() {
         console.log("success", res);
         $("#closeMeetingModal").click();
         getEmployees();
+        getHistory();
         $("#meetingTitle").val("");
       },
       error: err => {
@@ -153,18 +181,33 @@ function attndBtn(id) {
   attendees.push(id);
 }
 
-// Get the modal
+// Get the modals
 var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+
 var btn = document.querySelector(".myBtn");
+var btn2 = document.querySelector(".myBtn2");
+
 var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 btn.onclick = function() {
   modal.style.display = "block";
 };
+btn2.onclick = function() {
+  modal2.style.display = "block";
+};
+
 span.onclick = function() {
   modal.style.display = "none";
 };
+span2.onclick = function() {
+  modal2.style.display = "none";
+};
+
 window.onclick = function(event) {
   if (event.target == modal) {
+    modal.style.display = "none";
+  } else if (event.target == modal) {
     modal.style.display = "none";
   }
 };

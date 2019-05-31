@@ -8,151 +8,53 @@
       "gender": "male"
     },
     {
-      "id": 2,
-      "firstName": "abc",
-      "lastName": "def",
-      "email": "a@b.com",
-      "gender": "male"
+      "firstName": "Jane",
+      "lastName": "Dawsom",
+      "email": "jdaw@mail.com",
+      "gender": "female",
+      "id": 2
     },
     {
-      "firstName": "abu",
-      "lastName": "sadiq",
-      "email": "abs@mail.com",
+      "firstName": "Hulk",
+      "lastName": "the Incredible",
+      "email": "hulk@avengers.com",
       "gender": "male",
       "id": 3
     },
     {
-      "firstName": "jane",
-      "lastName": "dawsom",
-      "email": "jdaw@mail.com",
-      "gender": "female",
+      "firstName": "Thor",
+      "lastName": "son of Odin",
+      "email": "thor@asgard.com",
+      "gender": "male",
       "id": 4
     },
     {
-      "firstName": "dr",
-      "lastName": "strange",
-      "email": "drs@email.com",
-      "gender": "male",
-      "id": 5
-    },
-    {
-      "firstName": "cap",
-      "lastName": "marvel",
+      "firstName": "Captain",
+      "lastName": "Marvel",
       "email": "cm@avengers.com",
       "gender": "female",
-      "id": 6
-    },
-    {
-      "firstName": "aaa",
-      "lastName": "bbb",
-      "email": "ccc",
-      "gender": "ddd",
-      "att": [
-        {
-          "name": "musa"
-        },
-        {
-          "name": "amina"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "firstName": "sadiq",
-      "lastName": "sambo",
-      "email": "sadiqasg@gmail.com",
-      "gender": "male",
-      "id": 8
-    },
-    {
-      "firstName": "new",
-      "lastName": "employee",
-      "email": "ne@sd.vomq",
-      "gender": "male",
-      "id": 9
-    },
-    {
-      "firstName": "barry",
-      "lastName": "allen",
-      "email": "barry@starlabs.com",
-      "gender": "male",
-      "attendance": [],
-      "id": 10
+      "id": 5
     }
   ],
   "meetings": [
     {
       "id": 1,
-      "title": "meeting of meetings",
+      "title": "Meeting of all meetings",
+      "attendance": ["John Doe", "Captain Marvel"]
+    },
+    {
+      "title": "Lets decide the strongest avenger",
       "attendance": [
-        {
-          "name": "john"
-        },
-        {
-          "name": "wick"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "second meeting",
-      "attendance": [
-        {
-          "name": "night"
-        },
-        {
-          "name": "king"
-        }
-      ]
-    },
-    [
-      "sadiq",
-      "femi",
-      "john",
-      "doe"
-    ],
-    {
-      "title": "salary increase",
-      "attendees": [
-        "sadiq",
-        "femi",
-        "john",
-        "doe"
+        "Captain Marvel",
+        "Thor son of Odin",
+        "Hulk the Incredible"
       ],
-      "id": 4
+      "id": 2
     },
     {
-      "title": "salary increase",
-      "attendees": [
-        "sadiq",
-        "femi",
-        "john",
-        "doe"
-      ],
-      "id": 5
-    },
-    {
-      "title": "yeah bish",
-      "attendees": [
-        "John Doe",
-        "cap marvel"
-      ],
-      "id": 6
-    },
-    {
-      "title": "avengersssssss [pauses, breathes] assemble",
-      "attendees": [
-        "dr strange",
-        "cap marvel"
-      ],
-      "id": 7
-    },
-    {
-      "title": "more meetings",
-      "attendees": [
-        "abc def"
-      ],
-      "id": 8
+      "title": "Some more meetings",
+      "attendance": ["Captain Marvel", "Jane Doe"],
+      "id": 3
     }
   ]
 }

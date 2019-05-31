@@ -41,11 +41,11 @@
           id="collapsibleNavbar"
         >
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#">Admin Dashboard</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Home Page</a>
+              <a class="nav-link" href="../index.html">Back to Home Page</a>
             </li>
           </ul>
         </div>
@@ -91,9 +91,9 @@
               </div>
             </div>
 
-            <!-- Trigger/Open CSS Modal -->
-            <button class="myBtn" style='display: none'>Open Modal</button>
-
+            <!--  -->
+            <!-- Modals -->
+            <button class="myBtn" style="display: none"></button>
             <!-- The Modal By Id -->
             <div id="myModal" class="hardcode-modal">
               <!-- Modal content -->
@@ -101,17 +101,31 @@
                 <span class="close">&times;</span>
                 <div class="container">
                   <h5>Details</h5>
-                  <hr/>
+                  <hr />
                   <div class="row modal-by-id">
                     <div class="col-md-5">
-                        <p>Employee Number: <span id="employeeNumber"></span></p>
-                        <p>Gender: <span id="employeeGender"></span></p>
+                      <p>Employee Number: <span id="employeeNumber"></span></p>
+                      <p>Gender: <span id="employeeGender"></span></p>
                     </div>
                     <div class="col-md-7">
                       <p>Name: <span id="employeeName"></span></p>
                       <p>Email: <span id="employeeMail"></span></p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="myBtn2" style="display: none"></button>
+            <!-- Modal to view attendees -->
+            <div id="myModal2" class="hardcode-modal">
+              <!-- Modal content -->
+              <div class="hardcode-modal-content text-center" style="width:40%">
+                <span class="close2">&times;</span>
+                <div class="container">
+                  <h5>Attendance for <span id="meeting-title"></span></h5>
+                  <hr />
+                  <div style="list-style-type:none" id="attendees-list"></div>
                 </div>
               </div>
             </div>
