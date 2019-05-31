@@ -81,11 +81,12 @@ main #attend-img {
   color: #132238;
 }
 
-.close {
-  color: #aaaaaa;
+.close, .close2 {
+  color: crimson;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -93,4 +94,8 @@ main #attend-img {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.attnd-p {
+  border-bottom: 1px solid grey;
 }
