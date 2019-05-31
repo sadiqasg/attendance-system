@@ -21,7 +21,7 @@ $(function() {
                       <td class='table-rows'>${result[i].lastName}</td>
                       <td class='table-rows'>${result[i].email}</td>
                       <td class='table-rows'>${result[i].gender}</td>
-                      <td><button class='btn btn-danger'>delete</button></td></tr>
+                      <td><button class='btn btn-danger deleteEmployees'>delete</button></td></tr>
                   `;
 
           employees += `<a class='btn btn-outline-success m-1' id='${
@@ -96,17 +96,34 @@ $(function() {
       dataType: "json",
       success: data => {
         let attendees = data.attendance;
-        let list = ''
+        let list = "";
         for (let i = 0; i < attendees.length; i++) {
-          list += `<p class="attnd-p">${attendees[i]}</p>`
+          list += `<p class="attnd-p">${attendees[i]}</p>`;
         }
         $("#meeting-title").text(`"${data.title}"`);
-        $('#attendees-list').html(list)
+        $("#attendees-list").html(list);
         $(".myBtn2").click();
       },
       error: err => {
         console.log(err);
       }
+    });
+  });
+
+  // delete employees
+  $(document).on("click", ".deleteEmployees", function() {
+    let id = $(this)
+      .closest("tr")
+      .attr("id");
+    $.ajax({
+      type: 'DELETE',
+      url: `${url}/employees/${id}`,
+      dataType: 'json',
+      success: (data) => {
+        console.log('deleted', id, data)
+        getEmployees();
+      },
+      error: (err) => {console.log('error', err)}
     });
   });
 
@@ -139,7 +156,7 @@ $(function() {
     });
   });
 
-  // attendance record
+  // post attendance record
   $("#saveEmployeeAttendance").on("click", e => {
     e.preventDefault();
     let title = $("#meetingTitle").val();

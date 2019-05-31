@@ -40,7 +40,10 @@
     {
       "id": 1,
       "title": "Meeting of all meetings",
-      "attendance": ["John Doe", "Captain Marvel"]
+      "attendance": [
+        "John Doe",
+        "Captain Marvel"
+      ]
     },
     {
       "title": "Lets decide the strongest avenger",
@@ -53,7 +56,10 @@
     },
     {
       "title": "Some more meetings",
-      "attendance": ["Captain Marvel", "Jane Doe"],
+      "attendance": [
+        "Captain Marvel",
+        "Jane Doe"
+      ],
       "id": 3
     }
   ]
