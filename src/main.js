@@ -174,7 +174,7 @@ $(function() {
       lastName: $("input#last_name").val(),
       email: $("input#email").val(),
       gender: $("input#gender").val(),
-      attendance: []
+      status: "never attendend"
     };
 
     $.ajax({

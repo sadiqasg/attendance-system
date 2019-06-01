@@ -48,11 +48,11 @@
       "id": 5
     },
     {
-      "firstName": "sadiq",
-      "lastName": "sambo",
-      "email": "s@example.com",
+      "firstName": "Dr",
+      "lastName": "Strange",
+      "email": "drs@avengers.com",
       "gender": "male",
-      "status": "never attended",
+      "status": "Moderate",
       "id": 6
     }
   ],
@@ -73,6 +73,14 @@
         "Hulk the Incredible"
       ],
       "id": 2
+    },
+    {
+      "title": "meeting about salary",
+      "attendance": [
+        "Abdulqadr Abdullahi",
+        "sadiq sambo"
+      ],
+      "id": 3
     }
   ]
 }
