@@ -110,6 +110,7 @@
                     <div class="col-md-7">
                       <p>Name: <span id="employeeName"></span></p>
                       <p>Email: <span id="employeeMail"></span></p>
+                      <p>Attendance status: <span id="employeeStatus"></span></p>
                     </div>
                   </div>
                 </div>
@@ -149,7 +150,7 @@
                     + add
                   </button>
                 </div>
-                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
                   <div class="card-body">
                     <!-- employees here -->
                     <table
@@ -333,15 +334,15 @@
     
               <!-- Modal body -->
               <div class="modal-body text-center col-12">
-                <p>Update status of employee #</p><span id="this-id"></span></p>
-                <span>Regular | Defaulter | Absentee</span>
+                <p>Update status of employee #<span id="this-id"></span></p>
+                <span><em>Enter Options:</em> <b>Regular</b> | <b>Moderate</b> | <b>Defaulter</b></span>
                 <input type="text" class="form-control" placeholder="Enter status" id="status" />
                 <button class="btn btn-info btn-block mt-2" id="updateStatus">Update</button>
               </div>
     
               <!-- Modal footer -->
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                <button type="button" class="btn btn-danger" id="closePatch" data-dismiss="modal">
                   Close
                 </button>
               </div>

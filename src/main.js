@@ -1,20 +1,6 @@
 $(function() {
   const url = "http://localhost:3000";
 
-  // login
-  // $(document).on('click', '#adminLogin', () => {
-  //     let uname = username = $('#username').val();
-  //     let pwd = $('#pwd').val();
-  //   if (!uname || !pwd) {
-  //     alert('fill the missing fields')
-  //   }
-  //   if (user.username === "sadiq" || user.pwd === "superadmin") {
-  //     window.location = './views/dashboard.html';
-  //   } else {
-  //     $('#error').css('display', 'block');
-  //   }
-  // })
-
   // fetch employees from json db
   let getEmployees = () => {
     $.ajax({
@@ -35,7 +21,9 @@ $(function() {
                       <td class='table-rows'>${result[i].lastName}</td>
                       <td class='table-rows'>${result[i].email}</td>
                       <td class='table-rows'>${result[i].gender}</td>
-                      <td><button class='btn btn-danger deleteEmployees'>delete</button></td></tr>
+                      <td id='${
+                        result[i].id
+                      }'><button class="btn btn-info stat" data-toggle="modal" data-target="#editModal">edit status</button><button class='btn btn-danger deleteEmployees'>delete</button></td></tr>
                   `;
 
           employees += `<a class='btn btn-outline-success m-1' id='${
@@ -92,9 +80,42 @@ $(function() {
         $("#employeeGender").text(`${data.gender}`);
         $("#employeeName").text(`${data.firstName} ${data.lastName}`);
         $("#employeeMail").text(`${data.email}`);
+        $('#employeeStatus').text(`${data.status}`);
         $(".myBtn").click();
       },
       error: e => console.log(e)
+    });
+  });
+
+  // patch employee status
+  $(document).on("click", ".stat", function() {
+    let thisId = $(this)
+      .parent()
+      .attr("id");
+
+    $("#this-id").text(thisId);
+  });
+
+  // patch button
+  $("#updateStatus").on("click", () => {
+    let id = $("#this-id").text();
+    let status = $("#status").val();
+    if (!status) return;
+
+    let stat = {
+      status: $("#status").val()
+    };
+
+    $.ajax({
+      type: "PATCH",
+      url: `${url}/employees/${id}`,
+      data: JSON.stringify(stat),
+      dataType: "json",
+      contentType: 'application/json',
+      success: data => {
+        $('#closePatch').click();
+      },
+      error: e => console.log("error", e)
     });
   });
 
@@ -129,18 +150,20 @@ $(function() {
     let id = $(this)
       .closest("tr")
       .attr("id");
+
     $.ajax({
-      type: 'DELETE',
+      type: "DELETE",
       url: `${url}/employees/${id}`,
-      dataType: 'json',
-      success: (data) => {
-        console.log('deleted', id, data)
+      dataType: "json",
+      success: data => {
+        console.log("deleted", id, data);
         getEmployees();
       },
-      error: (err) => {console.log('error', err)}
+      error: err => {
+        console.log("error", err);
+      }
     });
   });
-
 
   // create/save employee
   $("#saveEmployee").on("click", e => {
@@ -222,6 +245,7 @@ var btn2 = document.querySelector(".myBtn2");
 
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close2")[0];
+
 btn.onclick = function() {
   modal.style.display = "block";
 };

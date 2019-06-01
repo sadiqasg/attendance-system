@@ -8,19 +8,19 @@
   ],
   "employees": [
     {
-      "id": 1,
       "firstName": "John",
       "lastName": "Doe",
-      "email": "jd@mail.com",
+      "email": "jd@aexample.com",
       "gender": "male",
-      "status": "never attended"
+      "status": "Regular",
+      "id": 1
     },
     {
       "firstName": "Jane",
-      "lastName": "Dawsom",
-      "email": "jdaw@mail.com",
-      "gender": "female",
-      "status": "never attended",
+      "lastName": "Doe",
+      "email": "jane@example.com",
+      "gender": "male",
+      "status": "Moderate",
       "id": 2
     },
     {
@@ -44,7 +44,16 @@
       "lastName": "Marvel",
       "email": "cm@avengers.com",
       "gender": "female",
+      "status": "never attended",
       "id": 5
+    },
+    {
+      "firstName": "sadiq",
+      "lastName": "sambo",
+      "email": "s@example.com",
+      "gender": "male",
+      "status": "never attended",
+      "id": 6
     }
   ],
   "meetings": [
@@ -64,14 +73,6 @@
         "Hulk the Incredible"
       ],
       "id": 2
-    },
-    {
-      "title": "Some more meetings",
-      "attendance": [
-        "Captain Marvel",
-        "Jane Doe"
-      ],
-      "id": 3
     }
   ]
 }
