@@ -23,6 +23,7 @@ Fork/Clone this repo to your system
 
 ```
 Then navigate into the repo folder and run `npm install` to install json-server
+Start the json-server by running `json-server --watch db.json`
 ```
 
 Launch the `index.html` on your browser to start the app. [use sadiq && superadmin as your login credentials]
@@ -40,7 +41,7 @@ Launch the `index.html` on your browser to start the app. [use sadiq && superadm
 * Michael Oragwa
 * Dare Lawal
 * Nnamdi
-* Chibuike
+* Chibueze
 * Moses
 * Kazeem Jimoh
 * Grace Frank
