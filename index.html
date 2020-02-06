@@ -50,13 +50,13 @@
               <input
                 type="text"
                 class="form-control mb-3"
-                placeholder="Username"
+                placeholder="Use - sadiq"
                 id="username"
               />
               <input
                 type="password"
                 class="form-control mb-3"
-                placeholder="Password"
+                placeholder="Use - superadmin"
                 id="pwd"
               />
               <button
@@ -131,7 +131,7 @@
             document.querySelector('#missing').style.display = "none";
           }, 2000)
         } else if (uname === "sadiq" && pwd === "superadmin") {
-          window.location = "./views/dashboard.html";
+          window.location = "./views/dashboard";
         } else {
           document.querySelector('#error').style.display = "block";
           setTimeout(function() {
