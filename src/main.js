@@ -1,5 +1,5 @@
 $(function() {
-  const url = "http://localhost:3000";
+  const url = "https://attendance-sys-api.herokuapp.com/";
 
   // fetch employees from json db
   let getEmployees = () => {
