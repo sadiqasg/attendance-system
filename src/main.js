@@ -1,5 +1,5 @@
 $(function() {
-  const url = "https://attendance-sys-api.herokuapp.com/";
+  const url = "https://attendance-sys-api.herokuapp.com";
 
   // fetch employees from json db
   let getEmployees = () => {
